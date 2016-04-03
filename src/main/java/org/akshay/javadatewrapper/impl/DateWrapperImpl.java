@@ -45,7 +45,7 @@ public class DateWrapperImpl implements DateWrapper {
      * @return {@link java.util.Date} object with number of days after today
      */
     public java.util.Date getDateAfter(int days) {
-        date = from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).minusDays(days).toInstant());
+        date = from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).plusDays(days).toInstant());
         return date;
     }
 
