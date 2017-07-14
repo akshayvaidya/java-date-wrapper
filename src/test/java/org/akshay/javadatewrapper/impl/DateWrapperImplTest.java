@@ -1,11 +1,10 @@
 package org.akshay.javadatewrapper.impl;
 
+import java.util.Date;
+
 import org.akshay.javadatewrapper.DateWrapper;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.Calendar;
-import java.util.Date;
 
 import static org.junit.Assert.assertTrue;
 
@@ -20,15 +19,6 @@ public class DateWrapperImplTest {
     @Before
     public void setUp() {
         date = new DateWrapperImpl();
-    }
-
-    @Test
-    public void testGetDate() {
-        Date testDate = date.getDate();
-
-        Calendar.getInstance().setTime(testDate);
-        assertTrue("Today is today", new Date().equals(testDate));
-
     }
 
     @Test
